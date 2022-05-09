@@ -1,3 +1,5 @@
+import Form from '../components/Form';
+
 /**
  * New Client page
  * @returns {JSX.Element} <NewClient/>
@@ -11,6 +13,7 @@ const NewClient = () => {
       <p className="mt-3 text-gray-500">
         Llena todos los siguientes campos para registrar un cliente
       </p>
+      <Form />
     </>
   );
 };
