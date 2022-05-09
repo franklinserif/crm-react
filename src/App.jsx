@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<InitSession />}></Route>
         <Route path="/clientes" element={<Layout />}>
-          <Route element={<Index />} />
+          <Route index element={<Index />} />
         </Route>
       </Routes>
     </BrowserRouter>
