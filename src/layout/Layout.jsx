@@ -7,7 +7,9 @@ import { Outlet, NavLink } from 'react-router-dom';
 const Layout = () => (
   <div className="md:flex md:min-h-screen">
     <div className="md:w-1/4 bg-gray-200 px-5 py-10">
-      <h2 className="text-3xl text-center text-gray-500">CRM - Clientes</h2>
+      <h2 className="text-3xl text-center text-gray-500">
+        Customer relationship managemen
+      </h2>
       <nav className="mt-10">
         <NavLink
           // eslint-disable-next-line no-confusing-arrow
