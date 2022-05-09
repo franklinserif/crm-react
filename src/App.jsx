@@ -14,10 +14,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/** All / routes */}
-        <Route path="/" element={<InitSession />}>
-          <Route index element={<LoginForm />} />
-        </Route>
         {/** All /Clientes routes */}
         <Route path="/clientes" element={<Layout />}>
           <Route index element={<Index />} />
