@@ -1,3 +1,7 @@
+/**
+ * It will provide a login form pages for users
+ * @returns {JSX.Element} <LoginForm/>
+ */
 const LoginForm = () => {
   return (
     <div>
