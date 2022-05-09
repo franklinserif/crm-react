@@ -6,9 +6,9 @@ import { Outlet } from 'react-router-dom';
  */
 const Layout = () => {
   return (
-    <div>
-      Layout
-      <Outlet />
+    <div class="md:flex md:min-h-screen">
+      <div class="md:w-1/2 ">w-1/2</div>
+      <div class="md:w-1/2">w-1/2</div>
     </div>
   );
 };

@@ -3,7 +3,7 @@
  * @returns {JSX.Element} <Index/>
  */
 const Index = () => {
-  return <div>Index</div>;
+  return <div>Index.js</div>;
 };
 
 export default Index;
