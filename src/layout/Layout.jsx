@@ -1,4 +1,4 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
 
 /**
  * Layout for /Clients routes
@@ -9,18 +9,37 @@ const Layout = () => (
     <div className="md:w-1/4 bg-gray-200 px-5 py-10">
       <h2 className="text-3xl text-center text-gray-500">CRM - Clientes</h2>
       <nav className="mt-10">
-        <Link
-          className="text-gray-600 text-1xl block uppercase mt-2 hover:text-gray-900 transition duration-150 ease-out hover:ease-in"
+        <NavLink
+          // eslint-disable-next-line no-confusing-arrow
+          className={
+            ({ isActive }) =>
+              // eslint-disable-next-line implicit-arrow-linebreak
+              `${
+                isActive
+                  ? 'text-gray-900 text-1xl block uppercase mt-2 hover:text-gray-600 transition'
+                  : 'text-gray-600 text-1xl block uppercase mt-2 hover:text-gray-900 transition'
+              }`
+            // eslint-disable-next-line react/jsx-curly-newline
+          }
           to="/clientes"
         >
           Clientes
-        </Link>
-        <Link
-          className="text-gray-600 text-1xl block uppercase mt-2 hover:text-gray-900 transition duration-150 ease-out hover:ease-in"
+        </NavLink>
+        <NavLink
+          className={
+            ({ isActive }) =>
+              // eslint-disable-next-line implicit-arrow-linebreak
+              `${
+                isActive
+                  ? 'text-gray-900 text-1xl block uppercase mt-2 hover:text-gray-600 transition'
+                  : 'text-gray-600 text-1xl block uppercase mt-2 hover:text-gray-900 transition'
+              }`
+            // eslint-disable-next-line react/jsx-curly-newline
+          }
           to="/clientes/nuevo"
         >
           Nuevo Cliente
-        </Link>
+        </NavLink>
       </nav>
     </div>
     <div className="md:w-3/4">
