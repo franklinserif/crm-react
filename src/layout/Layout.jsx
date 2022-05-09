@@ -44,7 +44,7 @@ const Layout = () => (
         </NavLink>
       </nav>
     </div>
-    <div className="md:w-3/4 p-10">
+    <div className="md:w-3/4 p-10 shadow-md">
       <Outlet />
     </div>
   </div>
