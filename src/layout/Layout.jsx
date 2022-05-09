@@ -44,7 +44,7 @@ const Layout = () => (
         </NavLink>
       </nav>
     </div>
-    <div className="md:w-3/4 p-10 shadow-md">
+    <div className="md:w-3/4 p-10 shadow-md md:h-screen overflow-scroll">
       <Outlet />
     </div>
   </div>
