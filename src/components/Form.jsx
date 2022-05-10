@@ -1,18 +1,28 @@
 import { Formik, Form as FormFormik, Field } from 'formik';
 
 const Form = () => {
+  console.log('');
   return (
     <div className="bg-white mt-10 px-5 py-10 rounded-md shadow-md md:w-3/4 mx-auto">
       <h1 className="text-gray-500 font-bold text-xl uppercase text-center">
         Agregar Clientes
       </h1>
-      <Formik>
+      <Formik
+        initialValues={{
+          name: '',
+          company: '',
+          email: '',
+          phone: '',
+          note: '',
+        }}
+      >
         <FormFormik className="mt-5">
           <div className="mb-4">
             <label htmlFor="name" className="text-gray-600">
               Nombre
             </label>
             <Field
+              name="name"
               id="name"
               type="text"
               placeholder="Nombre del cliente"
@@ -24,6 +34,7 @@ const Form = () => {
               Empresa
             </label>
             <Field
+              name="company"
               id="company"
               type="text"
               placeholder="Empresa del cliente"
@@ -35,6 +46,7 @@ const Form = () => {
               Email
             </label>
             <Field
+              name="email"
               id="email"
               type="email"
               placeholder="Email del cliente"
@@ -46,6 +58,7 @@ const Form = () => {
               Teléfono
             </label>
             <Field
+              name="phone"
               id="phone"
               type="text"
               placeholder="Teléfono del cliente"
@@ -57,6 +70,7 @@ const Form = () => {
               Notas
             </label>
             <Field
+              name="note"
               as="textarea"
               id="note"
               type="text"
