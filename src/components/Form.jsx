@@ -1,7 +1,14 @@
 import { Formik, Form as FormFormik, Field } from 'formik';
 
+/**
+ *  Will handle NewClientForm
+ * @returns {JSX.Element} <Form />
+ */
 const Form = () => {
-  console.log('');
+  const handleSubmit = (values) => {
+    console.log(values);
+  };
+
   return (
     <div className="bg-white mt-10 px-5 py-10 rounded-md shadow-md md:w-3/4 mx-auto">
       <h1 className="text-gray-500 font-bold text-xl uppercase text-center">
@@ -15,6 +22,7 @@ const Form = () => {
           phone: '',
           note: '',
         }}
+        onSubmit={handleSubmit}
       >
         {() => (
           <FormFormik className="mt-5">
