@@ -1,19 +1,13 @@
 import { Formik, Form as FormFormik, Field } from 'formik';
 import * as Yup from 'yup';
+import { newClientSchema } from '../schemas/clientSchemas';
+import ErrorMessage from './ErrorMessage';
 
 /**
  *  Will handle NewClientForm
  * @returns {JSX.Element} <Form />
  */
 const Form = () => {
-  const newClientSchema = Yup.object().shape({
-    name: Yup.string.required('El nombre es obligatorio'),
-    company: Yup.string.required('La empresa es obligatoria'),
-    email: Yup.email.require('El email es obligatorio'),
-    phone: Yup.phone.require('El telefono es obligatorio'),
-    note: Yup.string.require('Escribe una nota'),
-  });
-
   /**
    *
    * @param {Object} values
@@ -40,7 +34,7 @@ const Form = () => {
         onSubmit={handleSubmit}
         validationSchema={newClientSchema}
       >
-        {(data) => (
+        {({ errors, touched }) => (
           <FormFormik className="mt-5">
             <div className="mb-4">
               <label htmlFor="name" className="text-gray-600">
@@ -53,6 +47,9 @@ const Form = () => {
                 placeholder="Nombre del cliente"
                 className="mt-2 block w-full p-3 bg-gray-50"
               />
+              {errors.name && touched.name && (
+                <ErrorMessage>{errors.name}</ErrorMessage>
+              )}
             </div>
             <div className="mb-4">
               <label htmlFor="company" className="text-gray-600">
