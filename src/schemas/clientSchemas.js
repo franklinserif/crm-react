@@ -16,7 +16,7 @@ const newClientSchema = Yup.object().shape({
   name: name.required('El nombre es obligatorio'),
   company: company.required('La empresa es obligatorioa'),
   email: email.required('Escriba un email valido'),
-  phone: phone.required(),
+  phone: phone.required('Escrib un número de teléfono valido'),
   note: note.required('La nota es obligatoria'),
 });
 

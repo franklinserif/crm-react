@@ -62,6 +62,9 @@ const Form = () => {
                 placeholder="Empresa del cliente"
                 className="mt-2 block w-full p-3 bg-gray-50"
               />
+              {errors.company && touched.company && (
+                <ErrorMessage>{errors.company}</ErrorMessage>
+              )}
             </div>
             <div className="mb-4">
               <label htmlFor="email" className="text-gray-600">
@@ -74,6 +77,9 @@ const Form = () => {
                 placeholder="Email del cliente"
                 className="mt-2 block w-full p-3 bg-gray-50"
               />
+              {errors.email && touched.email && (
+                <ErrorMessage>{errors.email}</ErrorMessage>
+              )}
             </div>
             <div className="mb-4">
               <label htmlFor="phone" className="text-gray-600">
@@ -86,6 +92,9 @@ const Form = () => {
                 placeholder="Teléfono del cliente"
                 className="mt-2 block w-full p-3 bg-gray-50"
               />
+              {errors.phone && touched.phone && (
+                <ErrorMessage>{errors.phone}</ErrorMessage>
+              )}
             </div>
             <div className="mb-4">
               <label htmlFor="note" className="text-gray-600">
@@ -99,6 +108,9 @@ const Form = () => {
                 placeholder="Notas del cliente"
                 className="mt-2 block w-full p-3 bg-gray-50"
               />
+              {errors.note && touched.note && (
+                <ErrorMessage>{errors.note}</ErrorMessage>
+              )}
             </div>
             <input
               type="submit"
