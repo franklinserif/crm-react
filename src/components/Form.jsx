@@ -1,16 +1,31 @@
 import { Formik, Form as FormFormik, Field } from 'formik';
+import * as Yup from 'yup';
 
 /**
  *  Will handle NewClientForm
  * @returns {JSX.Element} <Form />
  */
 const Form = () => {
+  const newClientSchema = Yup.object().shape({
+    name: Yup.string.required('El nombre es obligatorio'),
+    company: Yup.string.required('La empresa es obligatoria'),
+    email: Yup.email.require('El email es obligatorio'),
+    phone: Yup.phone.require('El telefono es obligatorio'),
+    note: Yup.string.require('Escribe una nota'),
+  });
+
+  /**
+   *
+   * @param {Object} values
+   */
   const handleSubmit = (values) => {
-    console.log(values);
+    Yup.object().shape({
+      ...values,
+    });
   };
 
   return (
-    <div className="bg-white mt-10 px-5 py-10 rounded-md shadow-md md:w-3/4 mx-auto">
+    <div className="bg-white mt-10 px-5 py-10 rounded-md md:w-3/4 mx-auto shadow-md">
       <h1 className="text-gray-500 font-bold text-xl uppercase text-center">
         Agregar Clientes
       </h1>
@@ -23,8 +38,9 @@ const Form = () => {
           note: '',
         }}
         onSubmit={handleSubmit}
+        validationSchema={newClientSchema}
       >
-        {() => (
+        {(data) => (
           <FormFormik className="mt-5">
             <div className="mb-4">
               <label htmlFor="name" className="text-gray-600">

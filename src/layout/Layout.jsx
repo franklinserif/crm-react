@@ -6,7 +6,7 @@ import { Outlet, NavLink } from 'react-router-dom';
  */
 const Layout = () => (
   <div className="md:flex md:min-h-screen">
-    <div className="md:w-1/4 bg-gray-200 px-5 py-10">
+    <div className="md:w-1/4 bg-gray-900 px-5 py-10">
       <h2 className="text-3xl text-center text-gray-500">
         Customer relationship managemen
       </h2>
@@ -18,8 +18,8 @@ const Layout = () => (
               // eslint-disable-next-line implicit-arrow-linebreak
               `${
                 isActive
-                  ? 'text-gray-900 text-1xl block uppercase mt-2 hover:text-gray-600 transition'
-                  : 'text-gray-600 text-1xl block uppercase mt-2 hover:text-gray-900 transition'
+                  ? 'text-lime-500 text-1xl block uppercase mt-2 hover:text-gray-600 transition'
+                  : 'text-gray-400 text-1xl block uppercase mt-2 hover:text-gray-900 transition'
               }`
             // eslint-disable-next-line react/jsx-curly-newline
           }
@@ -33,8 +33,8 @@ const Layout = () => (
               // eslint-disable-next-line implicit-arrow-linebreak
               `${
                 isActive
-                  ? 'text-gray-900 text-1xl block uppercase mt-2 hover:text-gray-600 transition'
-                  : 'text-gray-600 text-1xl block uppercase mt-2 hover:text-gray-900 transition'
+                  ? 'text-lime-500 text-1xl block uppercase mt-2 hover:text-gray-600 transition'
+                  : 'text-gray-400 text-1xl block uppercase mt-2 hover:text-gray-900 transition'
               }`
             // eslint-disable-next-line react/jsx-curly-newline
           }
